@@ -148,10 +148,12 @@ body,
   position: absolute;
   top: 0;
   right: 0;
-  color: $primary-500 !important;
+  color: $tertiary-50 !important;
   width: 15px !important;
   height: 15px !important;
   cursor: pointer;
+  filter: drop-shadow(1px 1px rgb(204, 0, 255));
+  z-index: 5;
 }
 
 .message-form-container {
