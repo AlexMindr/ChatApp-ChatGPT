@@ -1,9 +1,9 @@
 import React from "react";
 import { ChatBubbleLeftRightIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { ChatType } from "@/shared/types";
+import { ChatHeaderProps } from "react-chat-engine-advanced";
 
 type Props = {
-  chat: ChatType;
+  chat: ChatHeaderProps;
 };
 
 const customHeader = ({ chat }: Props) => {
@@ -15,7 +15,11 @@ const customHeader = ({ chat }: Props) => {
       </div>
       <div className="flexbetween">
         <PhoneIcon className="icon-phone" />
-        <p className="header-text">{chat.description}</p>
+        {chat.description !== "⬅️ ⬅️ ⬅️" ? (
+          <p className="header-text">{chat.description}</p>
+        ) : (
+          <p className="header-text">No chat selected</p>
+        )}
       </div>
     </div>
   );
