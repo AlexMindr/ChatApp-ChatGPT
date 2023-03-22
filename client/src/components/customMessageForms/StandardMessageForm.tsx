@@ -1,17 +1,9 @@
-import {
-  AttachmentObject,
-  ChatObject,
-  MessageFormProps,
-} from "react-chat-engine-advanced";
+import { AttachmentObject } from "react-chat-engine-advanced";
 import React, { useState } from "react";
 import MessageFormUI from "./MessageFormUI";
+import { MessageProps } from "@/shared/types";
 
-type Props = {
-  props: MessageFormProps;
-  activeChat: ChatObject | undefined;
-};
-
-const StandardMessageForm = ({ props, activeChat }: Props) => {
+const StandardMessageForm = ({ props, activeChat }: MessageProps) => {
   const [message, setMessage] = useState("");
   const [attachment, setAttachment] = useState<File | null>(null);
 
