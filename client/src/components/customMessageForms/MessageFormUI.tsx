@@ -70,7 +70,7 @@ const MessageFormUI = ({
           />
           {appendText && (
             <input
-              className="'message-form-assist"
+              className="message-form-assist"
               type="text"
               disabled
               value={`${message} ${appendText}`}
