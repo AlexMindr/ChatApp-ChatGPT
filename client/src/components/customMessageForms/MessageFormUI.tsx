@@ -11,6 +11,8 @@ type Props = {
   message: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: () => Promise<void>;
+  appendText?: string;
+  handleKeyDown?: (e: React.KeyboardEvent) => void;
 };
 
 const MessageFormUI = ({
@@ -18,6 +20,8 @@ const MessageFormUI = ({
   message,
   handleChange,
   handleSubmit,
+  appendText,
+  handleKeyDown,
 }: Props) => {
   const [preview, setPreview] = useState("");
 
@@ -61,8 +65,17 @@ const MessageFormUI = ({
             type="text"
             value={message}
             onChange={handleChange}
+            onKeyDown={handleKeyDown}
             placeholder="Send a message..."
           />
+          {appendText && (
+            <input
+              className="'message-form-assist"
+              type="text"
+              disabled
+              value={`${message} ${appendText}`}
+            />
+          )}
         </div>
         <div className="message-form-icons">
           <div {...getRootProps()}>
