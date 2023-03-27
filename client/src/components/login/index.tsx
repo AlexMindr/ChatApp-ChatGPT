@@ -56,11 +56,19 @@ const Login = ({ setUser, setSecret }: Props) => {
         </div>
         <div className="login-actions">
           {isRegister ? (
-            <button type="button" onClick={handleRegister}>
+            <button
+              className="login-button"
+              type="button"
+              onClick={handleRegister}
+            >
               Register
             </button>
           ) : (
-            <button type="button" onClick={handleLogin}>
+            <button
+              className="login-button"
+              type="button"
+              onClick={handleLogin}
+            >
               Login
             </button>
           )}

@@ -45,6 +45,8 @@ const Chat = ({ user, secret }: Props) => {
             <StandardMessageForm props={props} activeChat={chatProps.chat} />
           );
         }}
+        isMobileChatSettingsOpen={false}
+        isMobileChatListOpen={true}
       />
     </div>
   );

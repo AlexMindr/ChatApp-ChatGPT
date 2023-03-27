@@ -78,6 +78,18 @@ body,
   color: $tertiary-50;
 }
 
+.login-button {
+  background-color: $tertiary-100;
+  border-radius: 5px;
+  border-color: $primary-800;
+  color: $gray-400;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .register-change {
   text-decoration: underline;
   color: $secondary-500;
